@@ -1,0 +1,21 @@
+h1 {
+    background-color: gold;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+div {
+    font-size: xx-large;
+    font-family: Garamond, serif;
+}
+
+li {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: azure;
+}
+
+ul {
+    list-style-type: square;
+    background-color: rgb(255, 102, 0);
+    color: aquamarine;
+}
