@@ -197,7 +197,7 @@ h3 {
   transform: scaleX(1);
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width:600px) {
   @font-face {
     font-family: "pacific";
     src: url("font/pacifico-regular-webfont.woff");
@@ -242,6 +242,10 @@ h3 {
     padding: 10px;
   }
   
+  ol{
+    padding: 0;
+  }
+
   button > img {
     object-fit: fill;
   }
@@ -259,10 +263,10 @@ h3 {
   
   #nav {
     position: absolute;
-    top: 20vh;
+    top: 18vh;
     height: 100%;
     background-color: white;
-    width: 25%;
+    width: 50%;
     z-index: 1;
     visibility: hidden;
   }
