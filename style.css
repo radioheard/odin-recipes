@@ -198,8 +198,202 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
+  @font-face {
+    font-family: "pacific";
+    src: url("font/pacifico-regular-webfont.woff");
+    src: url("font/pacifico-regular-webfont.woff2");
+    }
+  
+  @font-face {
+    font-family: "kalam";
+    src: url("font/kalam-regular-webfont.woff");
+    src: url("font/kalam-regular-webfont.woff2");
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #title {
+    text-align: center;
+    background-color: white;
+    width: 100vw;
+    align-self: center;
+    font-family: 'pacific';
+    font-size: 30px;
+    color: rgb(116, 78, 29);
+    box-shadow: inset 0px 0px 34px 11px rgba(117,65,2,0.66);
+    display: flex;
+    height: 20vh;
+    align-items: center;
+  }
+  #title > button {
+    margin-left: 30px;
+    border-radius: 50px;
+    border: solid 1px wheat;
+    background-color: rgb(116, 78, 29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  button > img {
+    object-fit: fill;
+  }
+  
+  #title > button:active {
+    background-color: rgb(192, 129, 46);
+  }
+  
+  button > img {
+    width: 40px;
+  }
+  h1 {
+    flex: 1;
+  }
+  
+  #nav {
+    position: absolute;
+    top: 20vh;
+    height: 100%;
+    background-color: white;
+    width: 25%;
+    z-index: 1;
+    visibility: hidden;
+  }
+  
+  #nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: circle;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: rgb(116, 78, 29);
+    font-family: monospace;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  .recipe {
+    position: absolute;
+    width: 70%;
+    background-color: white;
+    margin: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: kalam;
+  }
+  
+  h2 {
+    font-size: 4vw;
+    text-decoration: underline;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+  }
+  
+  h4 {
+    font-size: 30px;
+  }
+  
   .food-title {
+    display: grid;
     grid-template-columns: 0fr 2fr 2fr;
+    width: 100%;
     height: 15vh;
+  }
+  
+  .food-title > div {
+    background-size: cover;
+    height: inherit;
+  }
+  
+  .ingredients,
+  .steps {
+    align-self: flex-start;
+    padding-left: 8vw;
+  }
+  
+  .menu {
+    display: grid;
+    gap: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 20px;
+    justify-items: center;
+    height: 100%;
+  }
+  
+  .card {
+  border: solid 1px black;
+  background-color: white;
+  border-radius: 10px;
+  height: 200px;
+  width: 300px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  }
+  
+  h3 {
+    background-color: rgba(95, 95, 95, 0.671);
+    width: 100%;
+    height: 35%;
+    color: rgb(250, 250, 250);
+    font-family: monospace;
+    font-size: 20px;
+  }
+  /*FX*/
+  .hvr-sweep-to-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #6c00b4;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: rgb(14, 13, 13);
+  }
+  .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
