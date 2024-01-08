@@ -265,6 +265,7 @@ h3 {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  text-align: center;
 }
 .hvr-sweep-to-right:before {
   content: "";
